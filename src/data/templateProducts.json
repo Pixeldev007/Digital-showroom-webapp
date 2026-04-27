@@ -1,0 +1,787 @@
+[
+  {
+    "name": "Urban Style Studio Template",
+    "category": "Clothing Store Templates",
+    "description": "A fashion-first storefront built for D2C clothing brands with clean category navigation, campaign banners, and high-conversion product pages.",
+    "price": 3499,
+    "discount_price": 2499,
+    "type": "Template",
+    "tags": ["fashion", "clothing", "d2c", "lookbook"],
+    "preview_image_url": "https://placehold.co/1200x900/F8FAFC/1C1C1E?text=Urban+Style+Studio",
+    "demo_preview_url": "https://demo.digitalshowroom.app/urban-style-studio",
+    "features": [
+      "Size and color variant sections",
+      "Collection-based landing pages",
+      "Sticky add to cart on mobile",
+      "Seasonal promo banners"
+    ],
+    "customizable_fields": [
+      "Logo",
+      "Hero banners",
+      "Brand colors",
+      "Collections",
+      "Product cards",
+      "Announcement bar"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 184,
+    "is_featured": true
+  },
+  {
+    "name": "Saree Story Boutique Template",
+    "category": "Clothing Store Templates",
+    "description": "Designed for saree boutiques and ethnic labels that need elegant browsing, fabric highlights, and WhatsApp-assisted selling.",
+    "price": 3299,
+    "discount_price": 2299,
+    "type": "Template",
+    "tags": ["ethnic wear", "saree", "boutique", "whatsapp"],
+    "preview_image_url": "https://placehold.co/1200x900/FDF2F8/4A044E?text=Saree+Story+Boutique",
+    "demo_preview_url": "https://demo.digitalshowroom.app/saree-story-boutique",
+    "features": [
+      "Fabric detail callouts",
+      "Catalog enquiry via WhatsApp",
+      "Festival campaign sections",
+      "Premium product zoom"
+    ],
+    "customizable_fields": [
+      "Store logo",
+      "Festive banners",
+      "Category labels",
+      "Featured collections",
+      "Social proof blocks"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 139,
+    "is_featured": true
+  },
+  {
+    "name": "Tiny Trend Kidswear Template",
+    "category": "Clothing Store Templates",
+    "description": "A playful ecommerce template for kidswear sellers with bundle sections, age filters, and parent-friendly navigation.",
+    "price": 2999,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["kidswear", "apparel", "bundles", "mobile"],
+    "preview_image_url": "https://placehold.co/1200x900/FEF3C7/7C2D12?text=Tiny+Trend+Kidswear",
+    "demo_preview_url": "https://demo.digitalshowroom.app/tiny-trend-kidswear",
+    "features": [
+      "Age-based filters",
+      "Bundle and combo cards",
+      "Quick reorder sections",
+      "Parent trust badges"
+    ],
+    "customizable_fields": [
+      "Typography",
+      "Banner art",
+      "Product groups",
+      "Offer badges",
+      "Navigation tabs"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 92,
+    "is_featured": false
+  },
+  {
+    "name": "SmartCart Electronics Template",
+    "category": "Electronics Store Templates",
+    "description": "A conversion-focused electronics storefront built for gadgets, accessories, and high-ticket devices with spec-heavy product pages.",
+    "price": 3999,
+    "discount_price": 2799,
+    "type": "Template",
+    "tags": ["electronics", "gadgets", "specs", "checkout"],
+    "preview_image_url": "https://placehold.co/1200x900/E0F2FE/0F172A?text=SmartCart+Electronics",
+    "demo_preview_url": "https://demo.digitalshowroom.app/smartcart-electronics",
+    "features": [
+      "Technical specifications table",
+      "Accessory upsell modules",
+      "Flash deal banners",
+      "Compare-ready product layout"
+    ],
+    "customizable_fields": [
+      "Homepage hero",
+      "Category grid",
+      "Deal sections",
+      "Specification labels",
+      "Trust badges"
+    ],
+    "status": "active",
+    "rating": 4.9,
+    "reviews_count": 241,
+    "is_featured": true
+  },
+  {
+    "name": "Gadget Hub Express Template",
+    "category": "Electronics Store Templates",
+    "description": "Made for fast-moving mobile and accessory sellers who need offer-led merchandising and clear delivery promises.",
+    "price": 3599,
+    "discount_price": 2599,
+    "type": "Template",
+    "tags": ["gadget store", "offers", "accessories", "delivery"],
+    "preview_image_url": "https://placehold.co/1200x900/DBEAFE/1E3A8A?text=Gadget+Hub+Express",
+    "demo_preview_url": "https://demo.digitalshowroom.app/gadget-hub-express",
+    "features": [
+      "Countdown offer sections",
+      "Accessory bundle cards",
+      "Delivery ETA ribbons",
+      "COD and EMI highlights"
+    ],
+    "customizable_fields": [
+      "Brand palette",
+      "Offer cards",
+      "Top categories",
+      "Shipping promise text",
+      "Product badges"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 168,
+    "is_featured": false
+  },
+  {
+    "name": "HomeTech Appliance Mart Template",
+    "category": "Electronics Store Templates",
+    "description": "A polished template for appliance and home-tech stores with service-zone messaging, feature icons, and financing prompts.",
+    "price": 4299,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["appliances", "home tech", "emi", "service zones"],
+    "preview_image_url": "https://placehold.co/1200x900/E2E8F0/0F172A?text=HomeTech+Appliance+Mart",
+    "demo_preview_url": "https://demo.digitalshowroom.app/hometech-appliance-mart",
+    "features": [
+      "Warranty and installation sections",
+      "City-wise service coverage",
+      "Finance option callouts",
+      "Large-format product comparisons"
+    ],
+    "customizable_fields": [
+      "Store logo",
+      "EMI messaging",
+      "Service coverage text",
+      "Feature icon blocks",
+      "Brand sliders"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 84,
+    "is_featured": false
+  },
+  {
+    "name": "FreshBasket Daily Template",
+    "category": "Grocery Store Templates",
+    "description": "Built for neighborhood grocery delivery businesses with quick categories, repeat-order shortcuts, and same-day delivery communication.",
+    "price": 3199,
+    "discount_price": 2199,
+    "type": "Template",
+    "tags": ["grocery", "daily delivery", "repeat order", "local"],
+    "preview_image_url": "https://placehold.co/1200x900/DCFCE7/14532D?text=FreshBasket+Daily",
+    "demo_preview_url": "https://demo.digitalshowroom.app/freshbasket-daily",
+    "features": [
+      "Quick reorder for regular items",
+      "Same-day delivery banners",
+      "Category shortcuts",
+      "Local service area messaging"
+    ],
+    "customizable_fields": [
+      "Delivery slots",
+      "Category tiles",
+      "Offer strips",
+      "Store timings",
+      "Serviceable pincodes"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 211,
+    "is_featured": true
+  },
+  {
+    "name": "Organic Mandi Store Template",
+    "category": "Grocery Store Templates",
+    "description": "An earthy, trust-led grocery template for organic brands and farm-to-home sellers that want to emphasize freshness and sourcing.",
+    "price": 2899,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["organic", "farm fresh", "groceries", "trust"],
+    "preview_image_url": "https://placehold.co/1200x900/ECFCCB/365314?text=Organic+Mandi+Store",
+    "demo_preview_url": "https://demo.digitalshowroom.app/organic-mandi-store",
+    "features": [
+      "Farm source storytelling sections",
+      "Subscription-ready layouts",
+      "Fresh arrivals carousel",
+      "Ingredient and origin highlights"
+    ],
+    "customizable_fields": [
+      "Farmer stories",
+      "Product origin labels",
+      "Homepage layout",
+      "Offer chips",
+      "Delivery note"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 117,
+    "is_featured": false
+  },
+  {
+    "name": "KiranaGo Local Mart Template",
+    "category": "Grocery Store Templates",
+    "description": "A practical template for local kirana operators moving online, with WhatsApp ordering hooks and simple inventory presentation.",
+    "price": 2499,
+    "discount_price": 1799,
+    "type": "Template",
+    "tags": ["kirana", "local mart", "whatsapp order", "daily essentials"],
+    "preview_image_url": "https://placehold.co/1200x900/F1F5F9/334155?text=KiranaGo+Local+Mart",
+    "demo_preview_url": "https://demo.digitalshowroom.app/kiranago-local-mart",
+    "features": [
+      "Fast category browsing",
+      "Call and WhatsApp CTA blocks",
+      "Local delivery fee highlights",
+      "Frequently bought essentials lists"
+    ],
+    "customizable_fields": [
+      "Contact actions",
+      "Category names",
+      "Store address",
+      "Offer labels",
+      "Delivery rules"
+    ],
+    "status": "active",
+    "rating": 4.5,
+    "reviews_count": 76,
+    "is_featured": false
+  },
+  {
+    "name": "SpiceRoute Kitchen Template",
+    "category": "Restaurant / Food Ordering Templates",
+    "description": "A rich food-ordering template for restaurants and cloud kitchens with menu storytelling, combo sections, and direct ordering flows.",
+    "price": 3699,
+    "discount_price": 2599,
+    "type": "Template",
+    "tags": ["restaurant", "food ordering", "cloud kitchen", "combos"],
+    "preview_image_url": "https://placehold.co/1200x900/FEE2E2/7F1D1D?text=SpiceRoute+Kitchen",
+    "demo_preview_url": "https://demo.digitalshowroom.app/spiceroute-kitchen",
+    "features": [
+      "Menu sections with spice indicators",
+      "Combo meal merchandising",
+      "Direct order CTA",
+      "Delivery zone messaging"
+    ],
+    "customizable_fields": [
+      "Cuisine categories",
+      "Promo banners",
+      "Delivery times",
+      "Menu cards",
+      "Offer coupons"
+    ],
+    "status": "active",
+    "rating": 4.9,
+    "reviews_count": 263,
+    "is_featured": true
+  },
+  {
+    "name": "Cafe Brew Lane Template",
+    "category": "Restaurant / Food Ordering Templates",
+    "description": "Created for cafes and dessert studios that want a modern menu, preorder flow, and premium visual presentation.",
+    "price": 3099,
+    "discount_price": 2199,
+    "type": "Template",
+    "tags": ["cafe", "desserts", "preorder", "menu"],
+    "preview_image_url": "https://placehold.co/1200x900/FAE8FF/701A75?text=Cafe+Brew+Lane",
+    "demo_preview_url": "https://demo.digitalshowroom.app/cafe-brew-lane",
+    "features": [
+      "Featured beverages section",
+      "Cake preorder blocks",
+      "Pickup and delivery toggles",
+      "Instagram-ready gallery"
+    ],
+    "customizable_fields": [
+      "Menu sections",
+      "Brand visuals",
+      "Pickup timings",
+      "Review quotes",
+      "Announcement cards"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 144,
+    "is_featured": false
+  },
+  {
+    "name": "Pizza Rush Delivery Template",
+    "category": "Restaurant / Food Ordering Templates",
+    "description": "A high-energy ordering template for pizza, burgers, and QSR brands with upsells, coupons, and checkout-focused design.",
+    "price": 3399,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["qsr", "pizza", "delivery", "upsell"],
+    "preview_image_url": "https://placehold.co/1200x900/FECACA/991B1B?text=Pizza+Rush+Delivery",
+    "demo_preview_url": "https://demo.digitalshowroom.app/pizza-rush-delivery",
+    "features": [
+      "Combo builder modules",
+      "Add-on upsell cards",
+      "Checkout coupon strip",
+      "Store timing alerts"
+    ],
+    "customizable_fields": [
+      "Menu combos",
+      "Coupon banners",
+      "Delivery radius",
+      "Header artwork",
+      "Promotional stickers"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 98,
+    "is_featured": false
+  },
+  {
+    "name": "GlowCraft Salon Template",
+    "category": "Beauty & Salon Templates",
+    "description": "A beauty booking and retail template for salons that want service menus, package showcases, and product add-ons in one flow.",
+    "price": 3199,
+    "discount_price": 2299,
+    "type": "Template",
+    "tags": ["salon", "beauty", "appointments", "services"],
+    "preview_image_url": "https://placehold.co/1200x900/FCE7F3/9D174D?text=GlowCraft+Salon",
+    "demo_preview_url": "https://demo.digitalshowroom.app/glowcraft-salon",
+    "features": [
+      "Service package blocks",
+      "Before-and-after gallery",
+      "Booking CTA sections",
+      "Retail product highlights"
+    ],
+    "customizable_fields": [
+      "Service menu",
+      "Package pricing",
+      "Brand palette",
+      "Staff highlights",
+      "Gallery images"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 151,
+    "is_featured": true
+  },
+  {
+    "name": "LuxeSkin Beauty Store Template",
+    "category": "Beauty & Salon Templates",
+    "description": "A premium storefront for skincare and beauty sellers with ingredient-led storytelling and conversion-friendly routine bundles.",
+    "price": 3499,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["skincare", "beauty", "bundles", "premium"],
+    "preview_image_url": "https://placehold.co/1200x900/FDF2F8/831843?text=LuxeSkin+Beauty+Store",
+    "demo_preview_url": "https://demo.digitalshowroom.app/luxeskin-beauty-store",
+    "features": [
+      "Routine bundle merchandising",
+      "Ingredient education cards",
+      "Routine quiz CTA blocks",
+      "Customer review highlights"
+    ],
+    "customizable_fields": [
+      "Routine sections",
+      "Ingredient lists",
+      "Brand messaging",
+      "Offer banners",
+      "Trust icons"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 128,
+    "is_featured": false
+  },
+  {
+    "name": "MobileMax Showcase Template",
+    "category": "Mobile Shop Templates",
+    "description": "Purpose-built for smartphone retailers who need model comparison, launch offers, and fast lead capture on mobile.",
+    "price": 3799,
+    "discount_price": 2699,
+    "type": "Template",
+    "tags": ["mobile shop", "smartphones", "comparison", "offers"],
+    "preview_image_url": "https://placehold.co/1200x900/DDEAFE/1D4ED8?text=MobileMax+Showcase",
+    "demo_preview_url": "https://demo.digitalshowroom.app/mobilemax-showcase",
+    "features": [
+      "Model comparison cards",
+      "Exchange and finance prompts",
+      "Launch deal banners",
+      "Store visit lead form"
+    ],
+    "customizable_fields": [
+      "Launch offers",
+      "EMI blocks",
+      "Device categories",
+      "Store branches",
+      "Product specs"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 173,
+    "is_featured": true
+  },
+  {
+    "name": "RepairNTrade Mobile Shop Template",
+    "category": "Mobile Shop Templates",
+    "description": "A dual-purpose template for mobile sellers offering accessories, repairs, and second-hand device exchange programs.",
+    "price": 2999,
+    "discount_price": 2099,
+    "type": "Template",
+    "tags": ["repairs", "used phones", "accessories", "exchange"],
+    "preview_image_url": "https://placehold.co/1200x900/E0E7FF/312E81?text=RepairNTrade+Mobile+Shop",
+    "demo_preview_url": "https://demo.digitalshowroom.app/repairntrade-mobile-shop",
+    "features": [
+      "Repair service request block",
+      "Used device listing layout",
+      "Accessory cross-sell rows",
+      "Exchange enquiry banners"
+    ],
+    "customizable_fields": [
+      "Service categories",
+      "Exchange form fields",
+      "Accessory sections",
+      "Branch contact cards",
+      "Repair promises"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 89,
+    "is_featured": false
+  },
+  {
+    "name": "UrbanNest Furniture Template",
+    "category": "Furniture Store Templates",
+    "description": "A spacious, premium template for furniture brands with room-based browsing, customization options, and delivery trust sections.",
+    "price": 4499,
+    "discount_price": 3299,
+    "type": "Template",
+    "tags": ["furniture", "interiors", "customization", "delivery"],
+    "preview_image_url": "https://placehold.co/1200x900/E7E5E4/44403C?text=UrbanNest+Furniture",
+    "demo_preview_url": "https://demo.digitalshowroom.app/urbannest-furniture",
+    "features": [
+      "Room-by-room collection browsing",
+      "Material and finish selectors",
+      "Made-to-order messaging",
+      "Delivery and assembly trust blocks"
+    ],
+    "customizable_fields": [
+      "Room categories",
+      "Finish options",
+      "Homepage banners",
+      "Assembly notes",
+      "Store promise section"
+    ],
+    "status": "active",
+    "rating": 4.9,
+    "reviews_count": 132,
+    "is_featured": true
+  },
+  {
+    "name": "WoodAura Home Living Template",
+    "category": "Furniture Store Templates",
+    "description": "Tailored for premium furniture and decor sellers who need warm storytelling, catalog depth, and consultation-led conversion paths.",
+    "price": 4199,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["home decor", "premium furniture", "consultation", "catalog"],
+    "preview_image_url": "https://placehold.co/1200x900/F5F5F4/57534E?text=WoodAura+Home+Living",
+    "demo_preview_url": "https://demo.digitalshowroom.app/woodaura-home-living",
+    "features": [
+      "Interior inspiration sections",
+      "Consultation booking CTA",
+      "Material story panels",
+      "Large catalog navigation"
+    ],
+    "customizable_fields": [
+      "Story content",
+      "Consultation form",
+      "Room inspiration blocks",
+      "Product filters",
+      "Delivery FAQs"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 101,
+    "is_featured": false
+  },
+  {
+    "name": "MedQuick Pharmacy Template",
+    "category": "Pharmacy Templates",
+    "description": "A utility-focused pharmacy template designed for medicine ordering, prescription uploads, and neighborhood delivery communication.",
+    "price": 3399,
+    "discount_price": 2399,
+    "type": "Template",
+    "tags": ["pharmacy", "medicine delivery", "prescription", "health"],
+    "preview_image_url": "https://placehold.co/1200x900/DCFCE7/166534?text=MedQuick+Pharmacy",
+    "demo_preview_url": "https://demo.digitalshowroom.app/medquick-pharmacy",
+    "features": [
+      "Prescription upload prompts",
+      "Health essentials category blocks",
+      "Emergency delivery messaging",
+      "Doctor-recommended product rows"
+    ],
+    "customizable_fields": [
+      "Prescription instructions",
+      "Health categories",
+      "Delivery hours",
+      "Contact information",
+      "Offer sections"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 194,
+    "is_featured": true
+  },
+  {
+    "name": "WellnessPlus Pharmacy Template",
+    "category": "Pharmacy Templates",
+    "description": "A clean healthcare storefront that blends medicine commerce with wellness categories, subscription reminders, and trust signals.",
+    "price": 3099,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["wellness", "pharmacy", "subscriptions", "trust"],
+    "preview_image_url": "https://placehold.co/1200x900/F0FDF4/15803D?text=WellnessPlus+Pharmacy",
+    "demo_preview_url": "https://demo.digitalshowroom.app/wellnessplus-pharmacy",
+    "features": [
+      "Subscription reminder sections",
+      "Wellness category navigation",
+      "Doctor and chemist trust badges",
+      "Refill-friendly reorder flow"
+    ],
+    "customizable_fields": [
+      "Reminder copy",
+      "Category tabs",
+      "Trust badges",
+      "Wellness bundles",
+      "Support phone number"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 87,
+    "is_featured": false
+  },
+  {
+    "name": "BazaarOne Marketplace Template",
+    "category": "Multi-vendor Marketplace Templates",
+    "description": "A marketplace template for aggregators who want vendor collections, multi-store discovery, and buyer trust at scale.",
+    "price": 5999,
+    "discount_price": 4499,
+    "type": "Template",
+    "tags": ["marketplace", "multi vendor", "discovery", "scale"],
+    "preview_image_url": "https://placehold.co/1200x900/EDE9FE/5B21B6?text=BazaarOne+Marketplace",
+    "demo_preview_url": "https://demo.digitalshowroom.app/bazaarone-marketplace",
+    "features": [
+      "Vendor storefront highlights",
+      "Multi-category homepage modules",
+      "Marketplace trust and policy sections",
+      "Seller onboarding CTA"
+    ],
+    "customizable_fields": [
+      "Vendor cards",
+      "Marketplace categories",
+      "Commission messaging",
+      "Homepage sections",
+      "Buyer trust content"
+    ],
+    "status": "active",
+    "rating": 4.9,
+    "reviews_count": 226,
+    "is_featured": true
+  },
+  {
+    "name": "CraftCircle Seller Hub Template",
+    "category": "Multi-vendor Marketplace Templates",
+    "description": "Best suited for handmade, local, and niche marketplaces that need artisan stories alongside a vendor-led shopping journey.",
+    "price": 5499,
+    "discount_price": 3999,
+    "type": "Template",
+    "tags": ["artisans", "seller hub", "marketplace", "handmade"],
+    "preview_image_url": "https://placehold.co/1200x900/F3E8FF/6B21A8?text=CraftCircle+Seller+Hub",
+    "demo_preview_url": "https://demo.digitalshowroom.app/craftcircle-seller-hub",
+    "features": [
+      "Artisan profile sections",
+      "Category and seller discovery",
+      "Story-led marketplace banners",
+      "Featured seller spotlights"
+    ],
+    "customizable_fields": [
+      "Seller stories",
+      "Marketplace banners",
+      "Vendor filters",
+      "Category names",
+      "About marketplace copy"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 118,
+    "is_featured": false
+  },
+  {
+    "name": "CreatorLaunch Personal Brand Template",
+    "category": "Personal Brand / Portfolio Templates",
+    "description": "A conversion-led personal brand template for creators selling digital products, consultations, and signature offers.",
+    "price": 2799,
+    "discount_price": 1899,
+    "type": "Template",
+    "tags": ["creator", "personal brand", "consulting", "digital products"],
+    "preview_image_url": "https://placehold.co/1200x900/FFEDD5/9A3412?text=CreatorLaunch+Personal+Brand",
+    "demo_preview_url": "https://demo.digitalshowroom.app/creatorlaunch-personal-brand",
+    "features": [
+      "Offer and service showcase",
+      "Lead capture hero section",
+      "Testimonial blocks",
+      "Digital product CTA cards"
+    ],
+    "customizable_fields": [
+      "Profile photo",
+      "Personal bio",
+      "Offer sections",
+      "Testimonials",
+      "Primary CTA"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 163,
+    "is_featured": true
+  },
+  {
+    "name": "CoachPro Portfolio Store Template",
+    "category": "Personal Brand / Portfolio Templates",
+    "description": "Built for coaches, consultants, and service-led founders who need authority-building pages with a simple storefront layer.",
+    "price": 2599,
+    "discount_price": null,
+    "type": "Template",
+    "tags": ["coach", "portfolio", "consultant", "services"],
+    "preview_image_url": "https://placehold.co/1200x900/FEF3C7/92400E?text=CoachPro+Portfolio+Store",
+    "demo_preview_url": "https://demo.digitalshowroom.app/coachpro-portfolio-store",
+    "features": [
+      "Service package sections",
+      "Client success story panels",
+      "Booking CTA blocks",
+      "Simple store integration for resources"
+    ],
+    "customizable_fields": [
+      "Headshot",
+      "Authority section",
+      "Service cards",
+      "Client testimonials",
+      "Booking link"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 109,
+    "is_featured": false
+  },
+  {
+    "name": "Heritage Handloom House Template",
+    "category": "Clothing Store Templates",
+    "description": "A narrative-led template for regional handloom brands that want to combine tradition, craftsmanship, and modern checkout flows.",
+    "price": 3599,
+    "discount_price": 2699,
+    "type": "Template",
+    "tags": ["handloom", "artisan fashion", "heritage", "storytelling"],
+    "preview_image_url": "https://placehold.co/1200x900/FFF7ED/9A3412?text=Heritage+Handloom+House",
+    "demo_preview_url": "https://demo.digitalshowroom.app/heritage-handloom-house",
+    "features": [
+      "Craft story sections",
+      "Regional collection navigation",
+      "Occasion-based merchandising",
+      "Premium checkout layout"
+    ],
+    "customizable_fields": [
+      "Craft stories",
+      "Regional collections",
+      "Photography",
+      "Brand palette",
+      "Store announcements"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 97,
+    "is_featured": false
+  },
+  {
+    "name": "VoltEdge Accessories Template",
+    "category": "Electronics Store Templates",
+    "description": "A sharp, fast-loading template for accessories and power-device brands that need impulse-friendly merchandising and bundles.",
+    "price": 2899,
+    "discount_price": 1999,
+    "type": "Template",
+    "tags": ["accessories", "chargers", "bundles", "fast moving"],
+    "preview_image_url": "https://placehold.co/1200x900/E0F2FE/075985?text=VoltEdge+Accessories",
+    "demo_preview_url": "https://demo.digitalshowroom.app/voltedge-accessories",
+    "features": [
+      "Bundle pricing cards",
+      "Compatibility tags",
+      "Offer-led product rails",
+      "Fast checkout footer prompts"
+    ],
+    "customizable_fields": [
+      "Compatibility labels",
+      "Bundle sections",
+      "Offer banners",
+      "Header navigation",
+      "CTA labels"
+    ],
+    "status": "active",
+    "rating": 4.6,
+    "reviews_count": 122,
+    "is_featured": false
+  },
+  {
+    "name": "DailyDose Essentials Template",
+    "category": "Pharmacy Templates",
+    "description": "A dependable medicine and essentials template for chemists that need repeat-purchase flows and subscription-friendly design.",
+    "price": 2999,
+    "discount_price": 2149,
+    "type": "Template",
+    "tags": ["chemist", "refills", "daily essentials", "subscriptions"],
+    "preview_image_url": "https://placehold.co/1200x900/ECFDF5/065F46?text=DailyDose+Essentials",
+    "demo_preview_url": "https://demo.digitalshowroom.app/dailydose-essentials",
+    "features": [
+      "Refill reminder panels",
+      "Essential care bundles",
+      "Neighborhood delivery notes",
+      "Repeat order shortcuts"
+    ],
+    "customizable_fields": [
+      "Reminder settings",
+      "Care bundles",
+      "Store contact info",
+      "Delivery zones",
+      "Offer strips"
+    ],
+    "status": "active",
+    "rating": 4.7,
+    "reviews_count": 73,
+    "is_featured": false
+  },
+  {
+    "name": "Studio Seat Interiors Template",
+    "category": "Furniture Store Templates",
+    "description": "A modern catalog template for modular furniture brands that want project visuals, consultation CTAs, and room planning hooks.",
+    "price": 4699,
+    "discount_price": 3499,
+    "type": "Template",
+    "tags": ["modular furniture", "interiors", "consultation", "catalog"],
+    "preview_image_url": "https://placehold.co/1200x900/F5F5F4/292524?text=Studio+Seat+Interiors",
+    "demo_preview_url": "https://demo.digitalshowroom.app/studio-seat-interiors",
+    "features": [
+      "Modular layout sections",
+      "Consultation lead forms",
+      "Room planner CTA blocks",
+      "Installation and warranty details"
+    ],
+    "customizable_fields": [
+      "Project gallery",
+      "Lead forms",
+      "Category cards",
+      "Warranty copy",
+      "Showroom locations"
+    ],
+    "status": "active",
+    "rating": 4.8,
+    "reviews_count": 88,
+    "is_featured": true
+  }
+]
