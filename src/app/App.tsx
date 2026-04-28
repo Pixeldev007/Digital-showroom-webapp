@@ -11,6 +11,9 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
+import ECommercePage from "../pages/ECommercePage";
+import MarketingPage from "../pages/MarketingPage";
+import WebsitesPage from "../pages/WebsitesPage";
 
 type Template = {
   id: number;
@@ -346,11 +349,12 @@ function PublicNavbar() {
   }, [location.pathname]);
 
   const menuLinks = [
-    { label: "Templates", to: "/templates" },
-    { label: "Pricing", to: "/#pricing" },
-    { label: "Features", to: "/#features" },
-    { label: "Blog", to: "/#blog" },
+    { label: "Websites", to: "/websites" },
+    { label: "Marketing", to: "/marketing" },
+    { label: "E-Commerce", to: "/ecommerce" },
   ];
+
+  const isActiveLink = (path: string) => location.pathname === path;
 
   return (
     <>
@@ -361,7 +365,16 @@ function PublicNavbar() {
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
             {menuLinks.map((link) => (
-              <Link key={link.label} to={link.to} className="text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]">
+              <Link
+                key={link.label}
+                to={link.to}
+                className={classNames(
+                  "border-b-2 pb-1 text-sm transition-colors",
+                  isActiveLink(link.to)
+                    ? "border-[#2563EB] font-semibold text-[#2563EB]"
+                    : "border-transparent font-medium text-[var(--muted)] hover:text-[var(--text)]",
+                )}
+              >
                 {link.label}
               </Link>
             ))}
@@ -404,7 +417,16 @@ function PublicNavbar() {
             </div>
             <div className="mt-10 space-y-5">
               {menuLinks.map((link) => (
-                <Link key={link.label} to={link.to} className="block text-lg font-semibold text-[var(--text)]">
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className={classNames(
+                    "block border-b-2 pb-2 text-lg transition-colors",
+                    isActiveLink(link.to)
+                      ? "border-[#2563EB] font-semibold text-[#2563EB]"
+                      : "border-transparent font-medium text-[var(--text)]",
+                  )}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -1396,7 +1418,6 @@ function DashboardLayout() {
     { to: "/dashboard", label: "Overview", emoji: "🏠" },
     { to: "/dashboard/customize", label: "Customize Store", emoji: "🎨" },
     { to: "/dashboard/products", label: "My Products", emoji: "📦" },
-    { to: "/dashboard/orders", label: "Orders", emoji: "🛒" },
     { to: "/dashboard/marketing", label: "Marketing", emoji: "📣" },
     { to: "/dashboard/settings", label: "Settings", emoji: "⚙️" },
   ];
@@ -1527,7 +1548,6 @@ function DashboardOverviewPage() {
           <div className="rounded-[24px] border border-[var(--border)] bg-white p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <h2 className="font-heading text-xl font-bold">Recent Orders</h2>
-              <Link to="/dashboard/orders" className="text-sm font-semibold text-[var(--primary)]">View all</Link>
             </div>
             <div className="mt-5 space-y-3">
               {merchantOrders.slice(0, 5).map((order) => (
@@ -1857,7 +1877,7 @@ function OrdersPage() {
   );
 }
 
-function MarketingPage() {
+function DashboardMarketingPage() {
   const [broadcast, setBroadcast] = useState("Hi! Our festive sale is live. Tap your store link to shop new arrivals today.");
   const [offerEnabled, setOfferEnabled] = useState(true);
   const coupons = [
@@ -2190,11 +2210,13 @@ export function App() {
         <Routes>
           <Route element={<MarketingLayout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/websites" element={<WebsitesPage />} />
+            <Route path="/marketing" element={<MarketingPage />} />
+            <Route path="/ecommerce" element={<ECommercePage />} />
             <Route path="/templates" element={<TemplatesPage />} />
             <Route path="/templates/:id" element={<TemplateDetailPage />} />
             <Route path="/signup" element={<AuthPage mode="signup" />} />
             <Route path="/login" element={<AuthPage mode="login" />} />
-            <Route path="/pricing" element={<HomePage />} />
           </Route>
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route element={<ProtectedRoute />}>
@@ -2202,8 +2224,8 @@ export function App() {
               <Route index element={<DashboardOverviewPage />} />
               <Route path="customize" element={<CustomizePage />} />
               <Route path="products" element={<ProductsDashboardPage />} />
-              <Route path="orders" element={<OrdersPage />} />
-              <Route path="marketing" element={<MarketingPage />} />
+              <Route path="orders" element={<Navigate to="/dashboard" replace />} />
+              <Route path="marketing" element={<DashboardMarketingPage />} />
               <Route path="settings" element={<SettingsPage />} />
             </Route>
           </Route>
