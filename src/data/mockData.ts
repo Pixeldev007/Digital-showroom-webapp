@@ -149,8 +149,8 @@ export const cartItems = [
 export const paymentMethods = ["UPI", "Cards", "Netbanking", "COD"] as const;
 
 export const settingsSummary = {
-  storeName: "Digital Showroom",
-  logo: "DS mark",
+  storeName: "Oneos",
+  logo: "O mark",
   razorpayStatus: "Connected",
   settlement: "T+2 business days",
   shipping: [
@@ -159,3 +159,4 @@ export const settingsSummary = {
     { label: "Free shipping above", value: "Rs 999" },
   ],
 } as const;
+

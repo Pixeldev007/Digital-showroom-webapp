@@ -12,17 +12,18 @@ import {
   useParams,
 } from "react-router-dom";
 import ECommercePage from "../pages/ECommercePage";
-import MarketingPage from "../pages/MarketingPage";
 import WebsitesPage from "../pages/WebsitesPage";
 
 type Template = {
   id: number;
   name: string;
   category: string;
+  description: string;
   price: number;
   originalPrice: number | null;
   tags: string[];
   highlight: string;
+  customizableFields: string[];
   rating: number;
   reviews: number;
   featured: boolean;
@@ -104,31 +105,76 @@ type AuthContextValue = {
 };
 
 const templates: Template[] = [
-  { id: 1, name: "Urban Style Studio", category: "Clothing", price: 2499, originalPrice: 3499, tags: ["fashion", "d2c"], highlight: "Size & color variants", rating: 4.8, reviews: 184, featured: true },
-  { id: 2, name: "Saree Story Boutique", category: "Clothing", price: 2299, originalPrice: 3299, tags: ["ethnic", "saree"], highlight: "Fabric detail callouts", rating: 4.7, reviews: 139, featured: true },
-  { id: 3, name: "Tiny Trend Kidswear", category: "Clothing", price: 2999, originalPrice: null, tags: ["kidswear", "bundles"], highlight: "Age-based filters", rating: 4.6, reviews: 92, featured: false },
-  { id: 4, name: "Heritage Handloom House", category: "Clothing", price: 2699, originalPrice: 3599, tags: ["handloom", "heritage"], highlight: "Craft story sections", rating: 4.8, reviews: 97, featured: false },
-  { id: 5, name: "SmartCart Electronics", category: "Electronics", price: 2799, originalPrice: 3999, tags: ["gadgets", "specs"], highlight: "Spec comparison table", rating: 4.9, reviews: 241, featured: true },
-  { id: 6, name: "Gadget Hub Express", category: "Electronics", price: 2599, originalPrice: 3599, tags: ["offers", "accessories"], highlight: "Countdown offer sections", rating: 4.7, reviews: 168, featured: false },
-  { id: 7, name: "HomeTech Appliance Mart", category: "Electronics", price: 4299, originalPrice: null, tags: ["appliances", "emi"], highlight: "Warranty sections", rating: 4.6, reviews: 84, featured: false },
-  { id: 8, name: "FreshBasket Daily", category: "Grocery", price: 2199, originalPrice: 3199, tags: ["delivery", "repeat order"], highlight: "Quick reorder", rating: 4.8, reviews: 211, featured: true },
-  { id: 9, name: "Organic Mandi Store", category: "Grocery", price: 2899, originalPrice: null, tags: ["organic", "farm fresh"], highlight: "Farm sourcing story", rating: 4.7, reviews: 117, featured: false },
-  { id: 10, name: "KiranaGo Local Mart", category: "Grocery", price: 1799, originalPrice: 2499, tags: ["kirana", "whatsapp"], highlight: "Fast category browsing", rating: 4.5, reviews: 76, featured: false },
-  { id: 11, name: "SpiceRoute Kitchen", category: "Restaurant", price: 2599, originalPrice: 3699, tags: ["cloud kitchen", "food"], highlight: "Spice indicator menus", rating: 4.9, reviews: 263, featured: true },
-  { id: 12, name: "Cafe Brew Lane", category: "Restaurant", price: 2199, originalPrice: 3099, tags: ["cafe", "desserts"], highlight: "Preorder flow", rating: 4.7, reviews: 144, featured: false },
-  { id: 13, name: "Pizza Rush Delivery", category: "Restaurant", price: 3399, originalPrice: null, tags: ["qsr", "delivery"], highlight: "Combo builder", rating: 4.6, reviews: 98, featured: false },
-  { id: 14, name: "GlowCraft Salon", category: "Beauty", price: 2299, originalPrice: 3199, tags: ["salon", "appointments"], highlight: "Service packages", rating: 4.8, reviews: 151, featured: true },
-  { id: 15, name: "LuxeSkin Beauty Store", category: "Beauty", price: 3499, originalPrice: null, tags: ["skincare", "bundles"], highlight: "Routine bundles", rating: 4.7, reviews: 128, featured: false },
-  { id: 16, name: "MobileMax Showcase", category: "Mobile Shop", price: 2699, originalPrice: 3799, tags: ["smartphones", "compare"], highlight: "Model comparison", rating: 4.8, reviews: 173, featured: true },
-  { id: 17, name: "RepairNTrade Mobile", category: "Mobile Shop", price: 2099, originalPrice: 2999, tags: ["repairs", "exchange"], highlight: "Repair request block", rating: 4.6, reviews: 89, featured: false },
-  { id: 18, name: "UrbanNest Furniture", category: "Furniture", price: 3299, originalPrice: 4499, tags: ["interiors", "custom"], highlight: "Room-by-room browsing", rating: 4.9, reviews: 132, featured: true },
-  { id: 19, name: "WoodAura Home Living", category: "Furniture", price: 4199, originalPrice: null, tags: ["premium", "decor"], highlight: "Inspiration sections", rating: 4.7, reviews: 101, featured: false },
-  { id: 20, name: "MedQuick Pharmacy", category: "Pharmacy", price: 2399, originalPrice: 3399, tags: ["medicine", "prescription"], highlight: "Prescription upload", rating: 4.8, reviews: 194, featured: true },
-  { id: 21, name: "WellnessPlus Pharmacy", category: "Pharmacy", price: 3099, originalPrice: null, tags: ["wellness", "subscription"], highlight: "Subscription reminders", rating: 4.6, reviews: 87, featured: false },
-  { id: 22, name: "BazaarOne Marketplace", category: "Marketplace", price: 4499, originalPrice: 5999, tags: ["multi-vendor", "discovery"], highlight: "Vendor storefronts", rating: 4.9, reviews: 226, featured: true },
-  { id: 23, name: "CraftCircle Seller Hub", category: "Marketplace", price: 3999, originalPrice: 5499, tags: ["artisans", "handmade"], highlight: "Artisan profiles", rating: 4.8, reviews: 118, featured: false },
-  { id: 24, name: "CreatorLaunch Personal Brand", category: "Personal Brand", price: 1899, originalPrice: 2799, tags: ["creator", "consulting"], highlight: "Offer showcase", rating: 4.8, reviews: 163, featured: true },
-  { id: 25, name: "CoachPro Portfolio", category: "Personal Brand", price: 2599, originalPrice: null, tags: ["coach", "portfolio"], highlight: "Service packages", rating: 4.7, reviews: 109, featured: false },
+  {
+    id: 1,
+    name: "Urban Style Studio",
+    category: "Clothing",
+    description: "A polished fashion storefront for boutiques that want editorial hero sections, collection-led navigation, and fast mobile buying.",
+    price: 2499,
+    originalPrice: 3499,
+    tags: ["fashion", "d2c", "lookbook"],
+    highlight: "Size and color variants",
+    customizableFields: ["Logo", "Hero banners", "Brand colors", "Collections"],
+    rating: 4.8,
+    reviews: 184,
+    featured: true,
+  },
+  {
+    id: 2,
+    name: "FreshBasket Daily",
+    category: "Grocery",
+    description: "A quick-order grocery website with delivery-friendly categories, repeat purchase flows, and local trust messaging built in.",
+    price: 2199,
+    originalPrice: 3199,
+    tags: ["grocery", "delivery", "repeat order"],
+    highlight: "Quick reorder sections",
+    customizableFields: ["Delivery slots", "Category tiles", "Offer strips", "Store timings"],
+    rating: 4.8,
+    reviews: 211,
+    featured: true,
+  },
+  {
+    id: 3,
+    name: "SpiceRoute Kitchen",
+    category: "Restaurant",
+    description: "A menu-first restaurant template designed to push combos, direct orders, and WhatsApp checkout without app commissions.",
+    price: 2599,
+    originalPrice: 3699,
+    tags: ["restaurant", "food", "combos"],
+    highlight: "Menu sections with combo callouts",
+    customizableFields: ["Cuisine categories", "Promo banners", "Delivery times", "Menu cards"],
+    rating: 4.9,
+    reviews: 263,
+    featured: true,
+  },
+  {
+    id: 4,
+    name: "MobileMax Showcase",
+    category: "Mobile Shop",
+    description: "A high-conversion mobile retail design for launch offers, device comparisons, and store visit lead capture on phones.",
+    price: 2699,
+    originalPrice: 3799,
+    tags: ["mobile shop", "offers", "comparison"],
+    highlight: "Model comparison and launch deals",
+    customizableFields: ["Launch offers", "EMI blocks", "Device categories", "Store branches"],
+    rating: 4.8,
+    reviews: 173,
+    featured: false,
+  },
+  {
+    id: 5,
+    name: "MedQuick Pharmacy",
+    category: "Pharmacy",
+    description: "A trust-first pharmacy website for prescription uploads, health essentials, and repeat refill orders from neighborhood customers.",
+    price: 2399,
+    originalPrice: 3399,
+    tags: ["pharmacy", "medicine", "prescription"],
+    highlight: "Prescription upload and refill prompts",
+    customizableFields: ["Prescription instructions", "Health categories", "Delivery hours", "Offer sections"],
+    rating: 4.8,
+    reviews: 194,
+    featured: true,
+  },
 ];
 
 const businessCategories = [
@@ -155,7 +201,7 @@ const dashboardOrdersSeed: MerchantOrder[] = [
 
 const testimonials = [
   { name: "Ritika Sharma", city: "Jaipur", business: "Saree Boutique", quote: "I launched my store before lunch and got my first WhatsApp order the same evening.", initials: "RS" },
-  { name: "Ameen Farooq", city: "Lucknow", business: "Cloud Kitchen", quote: "Digital Showroom gave us a cleaner ordering flow than juggling Instagram DMs and PDFs.", initials: "AF" },
+  { name: "Ameen Farooq", city: "Lucknow", business: "Cloud Kitchen", quote: "Oneos gave us a cleaner ordering flow than juggling Instagram DMs and PDFs.", initials: "AF" },
   { name: "Jinal Patel", city: "Surat", business: "Kidswear Brand", quote: "The onboarding is so quick that even our non-technical staff can update products and banners.", initials: "JP" },
 ];
 
@@ -166,11 +212,11 @@ const defaultProducts: MerchantProduct[] = [
 ];
 
 const defaultStoreConfig: StoreConfig = {
-  storeName: "Digital Showroom Demo",
+  storeName: "Oneos Demo",
   businessCategory: "Clothing",
   whatsappNumber: "+91 98765 43210",
   city: "Bengaluru",
-  logoText: "DS",
+  logoText: "O",
   brandColor: "#2563EB",
   tagline: "Premium finds for modern Indian shoppers",
   heroHeading: "Build a storefront that sells on WhatsApp",
@@ -184,13 +230,13 @@ const defaultStoreConfig: StoreConfig = {
   },
   footerTagline: "Made for fast-moving Indian businesses that want to sell beautifully online.",
   socialLinks: {
-    instagram: "@digitalshowroom",
-    facebook: "facebook.com/digitalshowroom",
-    youtube: "youtube.com/@digitalshowroom",
+    instagram: "@oneos",
+    facebook: "facebook.com/oneos",
+    youtube: "youtube.com/@oneos",
   },
-  upiId: "digitalshowroom@okaxis",
+  upiId: "oneos@okaxis",
   codEnabled: true,
-  domain: "digitalshowroom.in/yourstore",
+  domain: "oneos.in/yourstore",
   notifications: {
     whatsapp: true,
     email: true,
@@ -320,7 +366,7 @@ function LogoMark({ compact = false }: { compact?: boolean }) {
       </div>
       {!compact ? (
         <div>
-          <div className="font-heading text-lg font-bold text-[var(--text)]">Digital Showroom</div>
+          <div className="font-heading text-lg font-bold text-[var(--text)]">Oneos</div>
           <div className="text-xs text-[var(--muted)]">Launch your store in seconds</div>
         </div>
       ) : null}
@@ -350,7 +396,6 @@ function PublicNavbar() {
 
   const menuLinks = [
     { label: "Websites", to: "/websites" },
-    { label: "Marketing", to: "/marketing" },
     { label: "E-Commerce", to: "/ecommerce" },
   ];
 
@@ -482,14 +527,14 @@ function Footer() {
         </div>
         <div className="space-y-4">
           <h3 className="font-semibold text-[var(--text)]">Contact</h3>
-          <p className="text-sm text-[var(--muted)]">support@digitalshowroom.in</p>
+          <p className="text-sm text-[var(--muted)]">support@oneos.in</p>
           <button type="button" className="inline-flex rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(37,211,102,0.22)]">
             WhatsApp Support
           </button>
         </div>
       </div>
       <div className="border-t border-[var(--border)] px-4 py-5 text-center text-sm text-[var(--muted)]">
-        © 2025 Digital Showroom. Made in India.
+        © 2025 Oneos. Made in India.
       </div>
     </footer>
   );
@@ -725,7 +770,7 @@ function HomePage() {
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Testimonials" title="Loved by Indian merchants" body="From solo founders to growing retail teams, merchants use Digital Showroom to launch faster." align="center" />
+          <SectionHeading eyebrow="Testimonials" title="Loved by Indian merchants" body="From solo founders to growing retail teams, merchants use Oneos to launch faster." align="center" />
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {testimonials.map((item, index) => (
               <div key={item.name} className="animate-card-rise rounded-[22px] border border-[var(--border)] bg-[var(--bg)] p-6" style={{ animationDelay: `${index * 50}ms` }}>
@@ -895,6 +940,285 @@ function TemplateMarketplaceCard({
           </button>
           <button type="button" onClick={onUse} className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-sm font-semibold text-white">
             Use This Template
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TemplatesShowcasePage() {
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("All");
+  const [sort, setSort] = useState("Featured");
+  const categories = ["All", ...Array.from(new Set(templates.map((template) => template.category)))];
+
+  const filtered = useMemo(() => {
+    let next = templates.filter((template) => {
+      const matchesQuery =
+        query.trim().length === 0 ||
+        [template.name, template.category, template.description, ...template.tags, template.highlight, ...template.customizableFields].some((value) =>
+          value.toLowerCase().includes(query.trim().toLowerCase()),
+        );
+
+      return matchesQuery && (category === "All" || template.category === category);
+    });
+
+    if (sort === "Featured") {
+      next = [...next].sort((a, b) => Number(b.featured) - Number(a.featured) || b.rating - a.rating);
+    }
+    if (sort === "Most Affordable") {
+      next = [...next].sort((a, b) => a.price - b.price);
+    }
+    if (sort === "Best Rated") {
+      next = [...next].sort((a, b) => b.rating - a.rating);
+    }
+
+    return next;
+  }, [category, query, sort]);
+
+  return (
+    <PageShell className="bg-[var(--bg)]">
+      <section className="bg-[linear-gradient(135deg,#0F172A_0%,#1D4ED8_62%,#60A5FA_100%)] text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-20">
+          <div className="space-y-6">
+            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
+              Template Gallery
+            </span>
+            <div className="space-y-4">
+              <h1 className="max-w-3xl font-heading text-4xl font-bold leading-tight sm:text-5xl">
+                Choose 1 of 5 website templates and customize it for your business
+              </h1>
+              <p className="max-w-2xl text-lg leading-8 text-blue-100">
+                Each template already looks like a real website. You only need to change your logo, colors, banners,
+                products, and business details.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 text-sm font-medium text-white/90">
+              {["5 ready-made designs", "Mobile-first layouts", "Customize in minutes"].map((item) => (
+                <div key={item} className="rounded-full border border-white/15 bg-white/10 px-4 py-3 backdrop-blur">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-[30px] border border-white/15 bg-white/10 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.28)] backdrop-blur">
+            <div className="rounded-[24px] bg-white p-4 text-slate-900 shadow-lg">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">How it works</div>
+                  <div className="mt-2 font-heading text-2xl font-bold">Pick, customize, launch</div>
+                </div>
+                <div className="rounded-full bg-blue-50 px-3 py-2 text-sm font-semibold text-[var(--primary)]">No code</div>
+              </div>
+              <div className="mt-5 space-y-3">
+                {[
+                  "Select the template closest to your business style",
+                  "Edit colors, hero banners, sections, and product content",
+                  "Preview the website and use it for onboarding",
+                ].map((item, index) => (
+                  <div key={item} className="flex items-start gap-3 rounded-[18px] bg-slate-50 p-4">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--primary)] text-sm font-bold text-white">
+                      {index + 1}
+                    </div>
+                    <p className="text-sm leading-6 text-slate-600">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Marketplace"
+          title="Five curated templates"
+          body="A smaller set makes it easier to pick a starting point and customize the design you actually want."
+        />
+
+        <div className="mt-8 rounded-full border border-[var(--border)] bg-white p-2 shadow-sm">
+          <div className="flex items-center gap-3 px-3">
+            <SearchGlyph />
+            <input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search by business type, feature, or customization option..."
+              className="h-12 w-full rounded-full bg-transparent text-sm outline-none placeholder:text-[var(--muted)]"
+            />
+          </div>
+        </div>
+
+        <div className="sticky top-[80px] z-20 mt-6 flex flex-col gap-4 rounded-[24px] border border-[var(--border)] bg-white/90 p-4 backdrop-blur lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex gap-2 overflow-x-auto pb-2 lg:pb-0">
+            {categories.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setCategory(item)}
+                className={classNames(
+                  "shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+                  category === item ? "bg-[var(--primary)] text-white" : "bg-[var(--bg)] text-[var(--muted)] hover:text-[var(--text)]",
+                )}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          <select
+            value={sort}
+            onChange={(event) => setSort(event.target.value)}
+            className="h-11 rounded-full border border-[var(--border)] bg-[var(--bg)] px-4 text-sm font-medium outline-none"
+          >
+            {["Featured", "Most Affordable", "Best Rated"].map((option) => (
+              <option key={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {filtered.map((template, index) => (
+            <TemplateShowcaseCard
+              key={template.id}
+              template={template}
+              delay={index * 50}
+              onPreview={() => navigate(`/templates/${template.id}`)}
+              onUse={() => navigate(`/signup?template=${template.id}`)}
+            />
+          ))}
+        </div>
+
+        {filtered.length === 0 ? (
+          <div className="mt-8 rounded-[24px] border border-dashed border-[var(--border)] bg-white p-8 text-center shadow-sm">
+            <h3 className="font-heading text-2xl font-bold text-[var(--text)]">No template matched that search</h3>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Try another business keyword or switch back to All to see the five available website designs.
+            </p>
+          </div>
+        ) : null}
+
+        <div className="mt-12 rounded-[28px] border border-[var(--border)] bg-white p-6 shadow-sm">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                title: "Website-style layouts",
+                body: "Each option already includes hero sections, product blocks, and call-to-action areas so you start from a real storefront design.",
+              },
+              {
+                title: "Easy customization",
+                body: "You can tailor brand colors, banners, text, categories, and contact details instead of building a site from scratch.",
+              },
+              {
+                title: "Built for conversion",
+                body: "The templates are optimized for mobile shoppers, quick browsing, and direct action like WhatsApp orders or product discovery.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[22px] bg-[var(--bg)] p-5">
+                <h3 className="font-heading text-xl font-bold text-[var(--text)]">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </PageShell>
+  );
+}
+
+function TemplateShowcaseCard({
+  template,
+  delay,
+  onPreview,
+  onUse,
+}: {
+  template: Template;
+  delay: number;
+  onPreview: () => void;
+  onUse: () => void;
+}) {
+  return (
+    <div
+      className="animate-card-rise rounded-[24px] border border-[var(--border)] bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[var(--primary)]/30 hover:shadow-[0_18px_36px_rgba(37,99,235,0.12)]"
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <div className={classNames("relative overflow-hidden rounded-[20px] p-4 text-white", previewGradient(template.category))}>
+        {template.featured ? <span className="absolute left-4 top-4 rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-semibold">Featured</span> : null}
+        <div className="rounded-[18px] border border-white/20 bg-slate-950/25 p-3 backdrop-blur">
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-white/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
+            <div className="ml-2 h-7 flex-1 rounded-full bg-white/15" />
+          </div>
+          <div className="mt-4 rounded-[18px] bg-white/95 p-4 text-slate-900">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">{template.category}</div>
+                <div className="mt-2 h-4 w-28 rounded-full bg-slate-200" />
+              </div>
+              <div className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">Live preview</div>
+            </div>
+            <div className="mt-4 h-20 rounded-[16px] bg-slate-100" />
+            <div className="mt-4 grid grid-cols-3 gap-2">
+              {[0, 1, 2].map((item) => (
+                <div key={item} className="h-12 rounded-xl bg-slate-100" />
+              ))}
+            </div>
+            <div className="mt-4 flex items-center justify-between gap-3">
+              <div className="h-3 w-24 rounded-full bg-slate-200" />
+              <div className="rounded-full bg-[var(--primary)] px-3 py-1 text-xs font-semibold text-white">Customize</div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 flex items-center justify-between text-xs font-semibold">
+          <span className="rounded-full bg-white/15 px-3 py-1 backdrop-blur">{template.category}</span>
+          <span className="text-white/80">Website design</span>
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <div className="flex items-center justify-between gap-3">
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">{template.category}</div>
+          <div className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[var(--primary)]">Customizable</div>
+        </div>
+        <h3 className="mt-2 font-heading text-2xl font-bold text-[var(--text)]">{template.name}</h3>
+        <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{template.description}</p>
+        <div className="mt-3 flex items-center gap-2 text-sm text-[var(--muted)]">
+          <span className="text-[var(--accent)]">Top rated</span>
+          <span>{template.rating.toFixed(1)} / 5 from {template.reviews} reviews</span>
+        </div>
+        <div className="mt-3 flex items-center gap-2">
+          <span className="text-lg font-bold text-[var(--primary)]">{formatINR(template.price)}</span>
+          {template.originalPrice ? <span className="text-sm text-[var(--muted)] line-through">{formatINR(template.originalPrice)}</span> : null}
+        </div>
+        <div className="mt-3 flex items-center gap-2 text-sm text-[var(--muted)]">
+          <span className="text-[var(--accent)]">Key feature</span>
+          <span>{template.highlight}</span>
+        </div>
+        <div className="mt-4">
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">You can customize</div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {template.customizableFields.map((field) => (
+              <span key={field} className="rounded-full bg-[var(--bg)] px-3 py-1 text-xs font-medium text-[var(--muted)]">
+                {field}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {template.tags.map((tag) => (
+            <span key={tag} className="rounded-full bg-[var(--bg)] px-3 py-1 text-xs font-medium text-[var(--muted)]">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="mt-5 flex gap-3">
+          <button type="button" onClick={onPreview} className="flex-1 rounded-full border border-[var(--border)] px-4 py-3 text-sm font-semibold text-[var(--text)]">
+            Preview Design
+          </button>
+          <button type="button" onClick={onUse} className="flex-1 rounded-full bg-[var(--primary)] px-4 py-3 text-sm font-semibold text-white">
+            Customize This Template
           </button>
         </div>
       </div>
@@ -1091,7 +1415,7 @@ function AuthPage({ mode }: { mode: "signup" | "login" }) {
           <div className="mt-8 space-y-3">
             <h1 className="font-heading text-3xl font-bold">{mode === "signup" ? "Create your free store" : "Welcome back"}</h1>
             <p className="text-sm text-[var(--muted)]">
-              {mode === "signup" ? "Start with a template, add products, and launch your digital showroom." : "Log in to manage your storefront, orders, and WhatsApp selling."}
+              {mode === "signup" ? "Start with a template, add products, and launch your Oneos store." : "Log in to manage your storefront, orders, and WhatsApp selling."}
             </p>
           </div>
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
@@ -1130,17 +1454,21 @@ function AuthPage({ mode }: { mode: "signup" | "login" }) {
               {mode === "signup" ? "Create Account" : "Login"}
             </button>
           </form>
-          <div className="my-6 flex items-center gap-3 text-sm text-[var(--muted)]">
-            <span className="h-px flex-1 bg-[var(--border)]" />
-            or continue with
-            <span className="h-px flex-1 bg-[var(--border)]" />
-          </div>
-          <button type="button" className="inline-flex h-12 w-full items-center justify-center gap-3 rounded-full border border-[var(--border)] bg-white text-sm font-semibold text-[var(--text)]">
-            <GoogleGlyph />
-            Continue with Google
-          </button>
+          {mode === "login" ? (
+            <>
+              <div className="my-6 flex items-center gap-3 text-sm text-[var(--muted)]">
+                <span className="h-px flex-1 bg-[var(--border)]" />
+                or continue with
+                <span className="h-px flex-1 bg-[var(--border)]" />
+              </div>
+              <button type="button" className="inline-flex h-12 w-full items-center justify-center gap-3 rounded-full border border-[var(--border)] bg-white text-sm font-semibold text-[var(--text)]">
+                <GoogleGlyph />
+                Continue with Google
+              </button>
+            </>
+          ) : null}
           <p className="mt-6 text-center text-sm text-[var(--muted)]">
-            {mode === "signup" ? "Already have an account?" : "New to Digital Showroom?"}{" "}
+            {mode === "signup" ? "Already have an account?" : "New to Oneos?"}{" "}
             <Link to={mode === "signup" ? "/login" : "/signup"} className="font-semibold text-[var(--primary)]">
               {mode === "signup" ? "Login →" : "Create account →"}
             </Link>
@@ -1154,7 +1482,7 @@ function AuthPage({ mode }: { mode: "signup" | "login" }) {
             <span className="inline-flex rounded-full bg-white/15 px-4 py-2 text-sm font-semibold">Merchant Spotlight</span>
             <h2 className="font-heading text-4xl font-bold leading-tight">“We launched our store and took paid orders on day one.”</h2>
             <p className="text-lg leading-8 text-white/85">
-              Digital Showroom helps Indian merchants skip agency delays and start selling with a WhatsApp-first storefront in minutes.
+              Oneos helps Indian merchants skip agency delays and start selling with a WhatsApp-first storefront in minutes.
             </p>
             <div className="rounded-[24px] bg-white/10 p-6 backdrop-blur">
               <div className="flex items-center gap-4">
@@ -1208,7 +1536,7 @@ function OnboardingPage() {
 
           {currentStep === 1 ? (
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              <InputField label="Store Name" value={storeConfig.storeName} onChange={(value) => updateStoreConfig({ storeName: value, logoText: value.slice(0, 2).toUpperCase() || "DS" })} />
+              <InputField label="Store Name" value={storeConfig.storeName} onChange={(value) => updateStoreConfig({ storeName: value, logoText: value.slice(0, 2).toUpperCase() || "O" })} />
               <InputField label="WhatsApp Number" value={storeConfig.whatsappNumber} onChange={(value) => updateStoreConfig({ whatsappNumber: value })} />
               <InputField label="City" value={storeConfig.city} onChange={(value) => updateStoreConfig({ city: value })} />
               <div className="lg:col-span-2">
@@ -1271,7 +1599,7 @@ function OnboardingPage() {
             <div className="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
               <div className="space-y-6">
                 <div className="rounded-[22px] border border-dashed border-[var(--border)] bg-[var(--bg)] p-6 text-center">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white text-xl font-bold shadow-sm">{storeConfig.logoText || "DS"}</div>
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white text-xl font-bold shadow-sm">{storeConfig.logoText || "O"}</div>
                   <div className="mt-4 text-sm font-semibold text-[var(--text)]">Upload Logo</div>
                   <div className="mt-2 text-sm text-[var(--muted)]">Drag & drop logo here or keep your initials placeholder.</div>
                 </div>
@@ -1434,7 +1762,7 @@ function DashboardLayout() {
         <div className="mt-8 rounded-[22px] bg-[var(--bg)] p-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--primary)] text-sm font-bold text-white">
-              {storeConfig.logoText || "DS"}
+              {storeConfig.logoText || "O"}
             </div>
             {!collapsed ? (
               <div>
@@ -1498,7 +1826,7 @@ function DashboardPageShell({ title, subtitle, children, actions }: { title: str
 }
 
 function DashboardOverviewPage() {
-  const { storeConfig, merchantOrders, merchantProducts } = usePlatform();
+  const { storeConfig, merchantProducts } = usePlatform();
   const stats = [
     { label: "Total Revenue", value: "₹2,48,500" },
     { label: "Orders Today", value: "26" },
@@ -1541,24 +1869,6 @@ function DashboardOverviewPage() {
                     {done ? "✓" : "•"}
                   </span>
                   <span className={classNames(done && "line-through text-[var(--muted)]")}>{task}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-[24px] border border-[var(--border)] bg-white p-6 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h2 className="font-heading text-xl font-bold">Recent Orders</h2>
-            </div>
-            <div className="mt-5 space-y-3">
-              {merchantOrders.slice(0, 5).map((order) => (
-                <div key={order.id} className="grid gap-3 rounded-2xl bg-[var(--bg)] p-4 md:grid-cols-[1.1fr_1fr_0.8fr_0.7fr] md:items-center">
-                  <div>
-                    <div className="font-semibold">{order.customer}</div>
-                    <div className="mt-1 text-sm text-[var(--muted)]">{order.items}</div>
-                  </div>
-                  <div className="text-sm text-[var(--muted)]">{formatINR(order.total)}</div>
-                  <StatusPill status={order.status} />
-                  <div className="text-sm text-[var(--muted)]">{order.time}</div>
                 </div>
               ))}
             </div>
@@ -2150,7 +2460,7 @@ function StorePreviewFrame({
             </div>
           ) : null}
           <div className="mt-5 rounded-[20px] bg-slate-950 p-4 text-white">
-            <div className="font-semibold">{storeName ?? "Digital Showroom Demo"}</div>
+            <div className="font-semibold">{storeName ?? "Oneos Demo"}</div>
             <div className="mt-2 text-sm text-white/70">{footerTagline ?? "A storefront built for Indian commerce and WhatsApp selling."}</div>
             {sectionState.whatsappButton ? (
               <button type="button" className="mt-4 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white">
@@ -2211,9 +2521,9 @@ export function App() {
           <Route element={<MarketingLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/websites" element={<WebsitesPage />} />
-            <Route path="/marketing" element={<MarketingPage />} />
+            <Route path="/marketing" element={<Navigate to="/" replace />} />
             <Route path="/ecommerce" element={<ECommercePage />} />
-            <Route path="/templates" element={<TemplatesPage />} />
+            <Route path="/templates" element={<TemplatesShowcasePage />} />
             <Route path="/templates/:id" element={<TemplateDetailPage />} />
             <Route path="/signup" element={<AuthPage mode="signup" />} />
             <Route path="/login" element={<AuthPage mode="login" />} />
@@ -2235,3 +2545,4 @@ export function App() {
     </BrowserRouter>
   );
 }
+

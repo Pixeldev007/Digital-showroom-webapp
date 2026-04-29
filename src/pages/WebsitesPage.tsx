@@ -108,7 +108,7 @@ const pricingPlans: PricingPlan[] = [
     note: "per month billed annually",
     features: [
       "10 products",
-      "Digital Showroom subdomain (yourstore.digitalshowroom.in)",
+      "Oneos subdomain (yourstore.oneos.in)",
       "WhatsApp ordering",
       "Basic templates",
       "UPI payments",
@@ -670,3 +670,4 @@ function StarIcon() {
     </svg>
   );
 }
+

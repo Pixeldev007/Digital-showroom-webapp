@@ -8,7 +8,7 @@
     "type": "Template",
     "tags": ["fashion", "clothing", "d2c", "lookbook"],
     "preview_image_url": "https://placehold.co/1200x900/F8FAFC/1C1C1E?text=Urban+Style+Studio",
-    "demo_preview_url": "https://demo.digitalshowroom.app/urban-style-studio",
+    "demo_preview_url": "https://demo.oneos.app/urban-style-studio",
     "features": [
       "Size and color variant sections",
       "Collection-based landing pages",
@@ -37,7 +37,7 @@
     "type": "Template",
     "tags": ["ethnic wear", "saree", "boutique", "whatsapp"],
     "preview_image_url": "https://placehold.co/1200x900/FDF2F8/4A044E?text=Saree+Story+Boutique",
-    "demo_preview_url": "https://demo.digitalshowroom.app/saree-story-boutique",
+    "demo_preview_url": "https://demo.oneos.app/saree-story-boutique",
     "features": [
       "Fabric detail callouts",
       "Catalog enquiry via WhatsApp",
@@ -65,7 +65,7 @@
     "type": "Template",
     "tags": ["kidswear", "apparel", "bundles", "mobile"],
     "preview_image_url": "https://placehold.co/1200x900/FEF3C7/7C2D12?text=Tiny+Trend+Kidswear",
-    "demo_preview_url": "https://demo.digitalshowroom.app/tiny-trend-kidswear",
+    "demo_preview_url": "https://demo.oneos.app/tiny-trend-kidswear",
     "features": [
       "Age-based filters",
       "Bundle and combo cards",
@@ -93,7 +93,7 @@
     "type": "Template",
     "tags": ["electronics", "gadgets", "specs", "checkout"],
     "preview_image_url": "https://placehold.co/1200x900/E0F2FE/0F172A?text=SmartCart+Electronics",
-    "demo_preview_url": "https://demo.digitalshowroom.app/smartcart-electronics",
+    "demo_preview_url": "https://demo.oneos.app/smartcart-electronics",
     "features": [
       "Technical specifications table",
       "Accessory upsell modules",
@@ -121,7 +121,7 @@
     "type": "Template",
     "tags": ["gadget store", "offers", "accessories", "delivery"],
     "preview_image_url": "https://placehold.co/1200x900/DBEAFE/1E3A8A?text=Gadget+Hub+Express",
-    "demo_preview_url": "https://demo.digitalshowroom.app/gadget-hub-express",
+    "demo_preview_url": "https://demo.oneos.app/gadget-hub-express",
     "features": [
       "Countdown offer sections",
       "Accessory bundle cards",
@@ -149,7 +149,7 @@
     "type": "Template",
     "tags": ["appliances", "home tech", "emi", "service zones"],
     "preview_image_url": "https://placehold.co/1200x900/E2E8F0/0F172A?text=HomeTech+Appliance+Mart",
-    "demo_preview_url": "https://demo.digitalshowroom.app/hometech-appliance-mart",
+    "demo_preview_url": "https://demo.oneos.app/hometech-appliance-mart",
     "features": [
       "Warranty and installation sections",
       "City-wise service coverage",
@@ -177,7 +177,7 @@
     "type": "Template",
     "tags": ["grocery", "daily delivery", "repeat order", "local"],
     "preview_image_url": "https://placehold.co/1200x900/DCFCE7/14532D?text=FreshBasket+Daily",
-    "demo_preview_url": "https://demo.digitalshowroom.app/freshbasket-daily",
+    "demo_preview_url": "https://demo.oneos.app/freshbasket-daily",
     "features": [
       "Quick reorder for regular items",
       "Same-day delivery banners",
@@ -205,7 +205,7 @@
     "type": "Template",
     "tags": ["organic", "farm fresh", "groceries", "trust"],
     "preview_image_url": "https://placehold.co/1200x900/ECFCCB/365314?text=Organic+Mandi+Store",
-    "demo_preview_url": "https://demo.digitalshowroom.app/organic-mandi-store",
+    "demo_preview_url": "https://demo.oneos.app/organic-mandi-store",
     "features": [
       "Farm source storytelling sections",
       "Subscription-ready layouts",
@@ -233,7 +233,7 @@
     "type": "Template",
     "tags": ["kirana", "local mart", "whatsapp order", "daily essentials"],
     "preview_image_url": "https://placehold.co/1200x900/F1F5F9/334155?text=KiranaGo+Local+Mart",
-    "demo_preview_url": "https://demo.digitalshowroom.app/kiranago-local-mart",
+    "demo_preview_url": "https://demo.oneos.app/kiranago-local-mart",
     "features": [
       "Fast category browsing",
       "Call and WhatsApp CTA blocks",
@@ -261,7 +261,7 @@
     "type": "Template",
     "tags": ["restaurant", "food ordering", "cloud kitchen", "combos"],
     "preview_image_url": "https://placehold.co/1200x900/FEE2E2/7F1D1D?text=SpiceRoute+Kitchen",
-    "demo_preview_url": "https://demo.digitalshowroom.app/spiceroute-kitchen",
+    "demo_preview_url": "https://demo.oneos.app/spiceroute-kitchen",
     "features": [
       "Menu sections with spice indicators",
       "Combo meal merchandising",
@@ -289,7 +289,7 @@
     "type": "Template",
     "tags": ["cafe", "desserts", "preorder", "menu"],
     "preview_image_url": "https://placehold.co/1200x900/FAE8FF/701A75?text=Cafe+Brew+Lane",
-    "demo_preview_url": "https://demo.digitalshowroom.app/cafe-brew-lane",
+    "demo_preview_url": "https://demo.oneos.app/cafe-brew-lane",
     "features": [
       "Featured beverages section",
       "Cake preorder blocks",
@@ -317,7 +317,7 @@
     "type": "Template",
     "tags": ["qsr", "pizza", "delivery", "upsell"],
     "preview_image_url": "https://placehold.co/1200x900/FECACA/991B1B?text=Pizza+Rush+Delivery",
-    "demo_preview_url": "https://demo.digitalshowroom.app/pizza-rush-delivery",
+    "demo_preview_url": "https://demo.oneos.app/pizza-rush-delivery",
     "features": [
       "Combo builder modules",
       "Add-on upsell cards",
@@ -345,7 +345,7 @@
     "type": "Template",
     "tags": ["salon", "beauty", "appointments", "services"],
     "preview_image_url": "https://placehold.co/1200x900/FCE7F3/9D174D?text=GlowCraft+Salon",
-    "demo_preview_url": "https://demo.digitalshowroom.app/glowcraft-salon",
+    "demo_preview_url": "https://demo.oneos.app/glowcraft-salon",
     "features": [
       "Service package blocks",
       "Before-and-after gallery",
@@ -373,7 +373,7 @@
     "type": "Template",
     "tags": ["skincare", "beauty", "bundles", "premium"],
     "preview_image_url": "https://placehold.co/1200x900/FDF2F8/831843?text=LuxeSkin+Beauty+Store",
-    "demo_preview_url": "https://demo.digitalshowroom.app/luxeskin-beauty-store",
+    "demo_preview_url": "https://demo.oneos.app/luxeskin-beauty-store",
     "features": [
       "Routine bundle merchandising",
       "Ingredient education cards",
@@ -401,7 +401,7 @@
     "type": "Template",
     "tags": ["mobile shop", "smartphones", "comparison", "offers"],
     "preview_image_url": "https://placehold.co/1200x900/DDEAFE/1D4ED8?text=MobileMax+Showcase",
-    "demo_preview_url": "https://demo.digitalshowroom.app/mobilemax-showcase",
+    "demo_preview_url": "https://demo.oneos.app/mobilemax-showcase",
     "features": [
       "Model comparison cards",
       "Exchange and finance prompts",
@@ -429,7 +429,7 @@
     "type": "Template",
     "tags": ["repairs", "used phones", "accessories", "exchange"],
     "preview_image_url": "https://placehold.co/1200x900/E0E7FF/312E81?text=RepairNTrade+Mobile+Shop",
-    "demo_preview_url": "https://demo.digitalshowroom.app/repairntrade-mobile-shop",
+    "demo_preview_url": "https://demo.oneos.app/repairntrade-mobile-shop",
     "features": [
       "Repair service request block",
       "Used device listing layout",
@@ -457,7 +457,7 @@
     "type": "Template",
     "tags": ["furniture", "interiors", "customization", "delivery"],
     "preview_image_url": "https://placehold.co/1200x900/E7E5E4/44403C?text=UrbanNest+Furniture",
-    "demo_preview_url": "https://demo.digitalshowroom.app/urbannest-furniture",
+    "demo_preview_url": "https://demo.oneos.app/urbannest-furniture",
     "features": [
       "Room-by-room collection browsing",
       "Material and finish selectors",
@@ -485,7 +485,7 @@
     "type": "Template",
     "tags": ["home decor", "premium furniture", "consultation", "catalog"],
     "preview_image_url": "https://placehold.co/1200x900/F5F5F4/57534E?text=WoodAura+Home+Living",
-    "demo_preview_url": "https://demo.digitalshowroom.app/woodaura-home-living",
+    "demo_preview_url": "https://demo.oneos.app/woodaura-home-living",
     "features": [
       "Interior inspiration sections",
       "Consultation booking CTA",
@@ -513,7 +513,7 @@
     "type": "Template",
     "tags": ["pharmacy", "medicine delivery", "prescription", "health"],
     "preview_image_url": "https://placehold.co/1200x900/DCFCE7/166534?text=MedQuick+Pharmacy",
-    "demo_preview_url": "https://demo.digitalshowroom.app/medquick-pharmacy",
+    "demo_preview_url": "https://demo.oneos.app/medquick-pharmacy",
     "features": [
       "Prescription upload prompts",
       "Health essentials category blocks",
@@ -541,7 +541,7 @@
     "type": "Template",
     "tags": ["wellness", "pharmacy", "subscriptions", "trust"],
     "preview_image_url": "https://placehold.co/1200x900/F0FDF4/15803D?text=WellnessPlus+Pharmacy",
-    "demo_preview_url": "https://demo.digitalshowroom.app/wellnessplus-pharmacy",
+    "demo_preview_url": "https://demo.oneos.app/wellnessplus-pharmacy",
     "features": [
       "Subscription reminder sections",
       "Wellness category navigation",
@@ -569,7 +569,7 @@
     "type": "Template",
     "tags": ["marketplace", "multi vendor", "discovery", "scale"],
     "preview_image_url": "https://placehold.co/1200x900/EDE9FE/5B21B6?text=BazaarOne+Marketplace",
-    "demo_preview_url": "https://demo.digitalshowroom.app/bazaarone-marketplace",
+    "demo_preview_url": "https://demo.oneos.app/bazaarone-marketplace",
     "features": [
       "Vendor storefront highlights",
       "Multi-category homepage modules",
@@ -597,7 +597,7 @@
     "type": "Template",
     "tags": ["artisans", "seller hub", "marketplace", "handmade"],
     "preview_image_url": "https://placehold.co/1200x900/F3E8FF/6B21A8?text=CraftCircle+Seller+Hub",
-    "demo_preview_url": "https://demo.digitalshowroom.app/craftcircle-seller-hub",
+    "demo_preview_url": "https://demo.oneos.app/craftcircle-seller-hub",
     "features": [
       "Artisan profile sections",
       "Category and seller discovery",
@@ -625,7 +625,7 @@
     "type": "Template",
     "tags": ["creator", "personal brand", "consulting", "digital products"],
     "preview_image_url": "https://placehold.co/1200x900/FFEDD5/9A3412?text=CreatorLaunch+Personal+Brand",
-    "demo_preview_url": "https://demo.digitalshowroom.app/creatorlaunch-personal-brand",
+    "demo_preview_url": "https://demo.oneos.app/creatorlaunch-personal-brand",
     "features": [
       "Offer and service showcase",
       "Lead capture hero section",
@@ -653,7 +653,7 @@
     "type": "Template",
     "tags": ["coach", "portfolio", "consultant", "services"],
     "preview_image_url": "https://placehold.co/1200x900/FEF3C7/92400E?text=CoachPro+Portfolio+Store",
-    "demo_preview_url": "https://demo.digitalshowroom.app/coachpro-portfolio-store",
+    "demo_preview_url": "https://demo.oneos.app/coachpro-portfolio-store",
     "features": [
       "Service package sections",
       "Client success story panels",
@@ -681,7 +681,7 @@
     "type": "Template",
     "tags": ["handloom", "artisan fashion", "heritage", "storytelling"],
     "preview_image_url": "https://placehold.co/1200x900/FFF7ED/9A3412?text=Heritage+Handloom+House",
-    "demo_preview_url": "https://demo.digitalshowroom.app/heritage-handloom-house",
+    "demo_preview_url": "https://demo.oneos.app/heritage-handloom-house",
     "features": [
       "Craft story sections",
       "Regional collection navigation",
@@ -709,7 +709,7 @@
     "type": "Template",
     "tags": ["accessories", "chargers", "bundles", "fast moving"],
     "preview_image_url": "https://placehold.co/1200x900/E0F2FE/075985?text=VoltEdge+Accessories",
-    "demo_preview_url": "https://demo.digitalshowroom.app/voltedge-accessories",
+    "demo_preview_url": "https://demo.oneos.app/voltedge-accessories",
     "features": [
       "Bundle pricing cards",
       "Compatibility tags",
@@ -737,7 +737,7 @@
     "type": "Template",
     "tags": ["chemist", "refills", "daily essentials", "subscriptions"],
     "preview_image_url": "https://placehold.co/1200x900/ECFDF5/065F46?text=DailyDose+Essentials",
-    "demo_preview_url": "https://demo.digitalshowroom.app/dailydose-essentials",
+    "demo_preview_url": "https://demo.oneos.app/dailydose-essentials",
     "features": [
       "Refill reminder panels",
       "Essential care bundles",
@@ -765,7 +765,7 @@
     "type": "Template",
     "tags": ["modular furniture", "interiors", "consultation", "catalog"],
     "preview_image_url": "https://placehold.co/1200x900/F5F5F4/292524?text=Studio+Seat+Interiors",
-    "demo_preview_url": "https://demo.digitalshowroom.app/studio-seat-interiors",
+    "demo_preview_url": "https://demo.oneos.app/studio-seat-interiors",
     "features": [
       "Modular layout sections",
       "Consultation lead forms",
@@ -785,3 +785,4 @@
     "is_featured": true
   }
 ]
+

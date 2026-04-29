@@ -6,7 +6,7 @@ import { AdminShell, PageCanvas, StatusBadge } from "./shared";
 export function SettingsSection() {
   const [storeName, setStoreName] = useState<string>(settingsSummary.storeName);
   const [logo, setLogo] = useState<string>(settingsSummary.logo);
-  const [email, setEmail] = useState<string>("support@digitalshowroom.in");
+  const [email, setEmail] = useState<string>("support@oneos.in");
   const [dispatchSla, setDispatchSla] = useState<string>("Within 24 hours");
   const [deliveryPromise, setDeliveryPromise] = useState<string>("2 to 5 business days");
   const [codEnabled, setCodEnabled] = useState(true);
@@ -124,3 +124,4 @@ export function SettingsSection() {
     </PageCanvas>
   );
 }
+

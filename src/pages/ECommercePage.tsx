@@ -55,14 +55,14 @@ const ecommerceFeatures = [
 ];
 
 const comparisonRows = [
-  { feature: "UPI & RuPay Payments", digitalShowroom: true, global: "Extra setup needed" },
-  { feature: "WhatsApp Order Button", digitalShowroom: true, global: "Paid plugin" },
-  { feature: "Indian Rupee Native", digitalShowroom: true, global: "Currency config needed" },
-  { feature: "Free Hosting Included", digitalShowroom: true, global: "Additional cost" },
-  { feature: "Setup in 15 Seconds", digitalShowroom: true, global: "Days to weeks" },
-  { feature: "Hindi & Regional Support", digitalShowroom: true, global: "Limited by vendor" },
-  { feature: "Zero Transaction Fees", digitalShowroom: true, global: "2-3% per order" },
-  { feature: "Dedicated India Support", digitalShowroom: true, global: "Global queue" },
+  { feature: "UPI & RuPay Payments", oneos: true, global: "Extra setup needed" },
+  { feature: "WhatsApp Order Button", oneos: true, global: "Paid plugin" },
+  { feature: "Indian Rupee Native", oneos: true, global: "Currency config needed" },
+  { feature: "Free Hosting Included", oneos: true, global: "Additional cost" },
+  { feature: "Setup in 15 Seconds", oneos: true, global: "Days to weeks" },
+  { feature: "Hindi & Regional Support", oneos: true, global: "Limited by vendor" },
+  { feature: "Zero Transaction Fees", oneos: true, global: "2-3% per order" },
+  { feature: "Dedicated India Support", oneos: true, global: "Global queue" },
 ];
 
 const pricingPlans = [
@@ -134,7 +134,7 @@ const faqs = [
   },
   {
     question: "Is there a commission on my sales?",
-    answer: "No. Digital Showroom charges zero commission on any order. You keep 100% of your revenue.",
+    answer: "No. Oneos charges zero commission on any order. You keep 100% of your revenue.",
   },
   {
     question: "Can I use my own domain name?",
@@ -257,7 +257,7 @@ export default function ECommercePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-3xl font-bold text-slate-900 sm:text-4xl">
-              Why Indian merchants choose Digital Showroom
+              Why Indian merchants choose Oneos
             </h2>
             <p className="mt-4 text-lg text-slate-600">Built in India. Built for India.</p>
           </div>
@@ -267,7 +267,7 @@ export default function ECommercePage() {
                 <thead>
                   <tr>
                     <th className="bg-slate-50 px-6 py-5 text-left text-sm font-semibold text-slate-600">Feature</th>
-                    <th className="bg-[#2563EB] px-6 py-5 text-left text-sm font-semibold text-white">Digital Showroom 🇮🇳</th>
+                    <th className="bg-[#2563EB] px-6 py-5 text-left text-sm font-semibold text-white">Oneos 🇮🇳</th>
                     <th className="bg-slate-100 px-6 py-5 text-left text-sm font-semibold text-slate-600">Global Platforms</th>
                   </tr>
                 </thead>
@@ -433,7 +433,7 @@ export default function ECommercePage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-3xl font-bold text-slate-900 sm:text-4xl">
-              Common questions about e-commerce on Digital Showroom
+              Common questions about e-commerce on Oneos
             </h2>
           </div>
           <div className="mt-12 space-y-4">
@@ -715,3 +715,4 @@ function ShippingIcon() {
     </svg>
   );
 }
+

@@ -83,10 +83,10 @@ export function AdminShell({
     <div className="admin-shell showroom-admin-shell">
       <aside className="admin-sidebar">
         <div className="side-index__brand">
-          <div className="brand-mark">DS</div>
+          <div className="brand-mark">O</div>
           <div>
-            <strong>Digital Showroom</strong>
-            <span>digitalshowroom.in</span>
+            <strong>Oneos</strong>
+            <span>oneos.in</span>
           </div>
         </div>
         <AdminNav activeId={activeId} />
@@ -102,7 +102,7 @@ export function AdminShell({
         <div className="admin-topbar">
           <div>
             <h4>{title}</h4>
-            <span>Digital Showroom Store</span>
+            <span>Oneos Store</span>
           </div>
           <div className="topbar-actions">
             <span className="icon-chip">2</span>
@@ -181,3 +181,4 @@ export function StorefrontPreview({
     </div>
   );
 }
+

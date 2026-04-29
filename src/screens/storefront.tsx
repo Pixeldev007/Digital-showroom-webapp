@@ -49,7 +49,7 @@ export function StorefrontSection() {
               {preview === "home" ? (
                 <div className="store-mobile">
                   <div className="announcement-bar">Free shipping above Rs 999</div>
-                  <div className="store-mobile__header">Digital Showroom</div>
+                  <div className="store-mobile__header">Oneos</div>
                   <div className="store-mobile__banner" />
                   <div className="pill-row">
                     {storefrontCategories.map((category) => (
@@ -205,3 +205,4 @@ export function StorefrontSection() {
     </PageCanvas>
   );
 }
+
