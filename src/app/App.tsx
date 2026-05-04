@@ -506,7 +506,7 @@ function Footer() {
         <div className="space-y-4">
           <LogoMark />
           <p className="max-w-xs text-sm leading-6 text-[var(--muted)]">
-            Create a beautiful WhatsApp-first storefront, collect orders, and launch your business online without code.
+            Launch a beautiful online store, receive orders seamlessly, and grow your business without coding.
           </p>
         </div>
         <div>
@@ -521,7 +521,6 @@ function Footer() {
           <h3 className="font-semibold text-[var(--text)]">Company</h3>
           <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
             <li><a href="#features">Features</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -575,11 +574,11 @@ function HomePage() {
   ];
 
   const featureCards = [
-    "WhatsApp Selling",
+    "Shiprocket Management",
     "UPI Payments",
     "Catalog Management",
-    "Coupons & Offers",
-    "Custom Domain",
+    "Marketing",
+    "OrderFlow Management",
     "Analytics",
   ];
 
@@ -597,7 +596,7 @@ function HomePage() {
                 Build Your Online Store in 15 Seconds
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-                Pick a template, add your products, and start selling on WhatsApp — no coding needed. Trusted by 10 lakh+ Indian merchants.
+                Create your store quickly by selecting a template, adding your products, and launching without any coding.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -606,7 +605,7 @@ function HomePage() {
                 onClick={() => navigate("/signup")}
                 className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--primary)] px-7 text-base font-semibold text-white shadow-[0_16px_32px_rgba(37,99,235,0.22)] transition-transform hover:-translate-y-0.5 hover:bg-[var(--primary-dark)]"
               >
-                Get Started Free
+                Get Started
               </button>
               <button
                 type="button"
@@ -615,13 +614,6 @@ function HomePage() {
               >
                 Browse Templates
               </button>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {["Free Forever Plan", "No Coding Needed", "WhatsApp Ready"].map((badge) => (
-                <span key={badge} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[var(--text)] shadow-sm ring-1 ring-[var(--border)]">
-                  {badge}
-                </span>
-              ))}
             </div>
           </div>
           <div className="relative z-10">
@@ -731,11 +723,11 @@ function HomePage() {
                 </div>
                 <h3 className="mt-5 font-heading text-xl font-bold">{feature}</h3>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-                  {feature === "WhatsApp Selling" && "Share your store link and collect orders where your customers already reply fastest."}
+                  {feature === "Shiprocket Management" && "Manage shipping, tracking, and delivery workflows from one place with Shiprocket-ready operations."}
                   {feature === "UPI Payments" && "Accept UPI, cards, and COD out of the box for Indian checkout expectations."}
                   {feature === "Catalog Management" && "Add unlimited products, banners, collections, and offers without technical help."}
-                  {feature === "Coupons & Offers" && "Launch discount codes and festive promotions in one click."}
-                  {feature === "Custom Domain" && "Upgrade from a free link to your own .in domain for just ₹499/year."}
+                  {feature === "Marketing" && "Run campaigns, promote offers, and bring customers back with built-in marketing tools."}
+                  {feature === "OrderFlow Management" && "Track incoming orders, update statuses, and keep fulfillment moving without manual chaos."}
                   {feature === "Analytics" && "Track visits, orders, revenue, and top-performing products in real time."}
                 </p>
               </div>

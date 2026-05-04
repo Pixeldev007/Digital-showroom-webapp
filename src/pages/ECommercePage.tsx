@@ -123,33 +123,6 @@ const successStories = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Do I need coding skills to set up my store?",
-    answer: "No. Everything is no-code. Pick a template, add products, go live — no developer needed.",
-  },
-  {
-    question: "Which payment methods can my customers use?",
-    answer: "UPI (PhonePe, GPay, Paytm), debit/credit cards, net banking, wallets, and Cash on Delivery.",
-  },
-  {
-    question: "Is there a commission on my sales?",
-    answer: "No. Oneos charges zero commission on any order. You keep 100% of your revenue.",
-  },
-  {
-    question: "Can I use my own domain name?",
-    answer: "Yes. Growth and Pro plans include a free .in domain. You can also connect a domain you already own.",
-  },
-  {
-    question: "How do customers place orders?",
-    answer: "Through your website directly, or via WhatsApp. Both flows are built in — no third-party tools needed.",
-  },
-  {
-    question: "Can I migrate from Shopify or WooCommerce?",
-    answer: "Yes. Our team helps you migrate your product catalog using CSV import. Most migrations complete in under a day.",
-  },
-];
-
 const demoContent: Record<
   DemoTab,
   {
@@ -205,7 +178,6 @@ const demoContent: Record<
 
 export default function ECommercePage() {
   const [activeTab, setActiveTab] = useState<DemoTab>("Add a Product");
-  const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -429,39 +401,6 @@ export default function ECommercePage() {
         </div>
       </section>
 
-      <section className="bg-[#F8FAFC] py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-3xl font-bold text-slate-900 sm:text-4xl">
-              Common questions about e-commerce on Oneos
-            </h2>
-          </div>
-          <div className="mt-12 space-y-4">
-            {faqs.map((faq, index) => {
-              const open = openFaq === index;
-
-              return (
-                <div key={faq.question} className="overflow-hidden rounded-[20px] bg-white shadow-sm">
-                  <button
-                    type="button"
-                    onClick={() => setOpenFaq(open ? -1 : index)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                  >
-                    <span className="text-lg font-semibold text-[#2563EB]">{faq.question}</span>
-                    <span className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}>
-                      <ChevronIcon />
-                    </span>
-                  </button>
-                  <div className={`overflow-hidden px-6 transition-[max-height] duration-300 ${open ? "max-h-40 pb-6" : "max-h-0"}`}>
-                    <p className="text-base leading-7 text-slate-600">{faq.answer}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[linear-gradient(135deg,#064E3B_0%,#065F46_100%)] py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-heading text-4xl font-bold">Stop paying commission to marketplaces. Own your store.</h2>
@@ -621,14 +560,6 @@ function CloseIcon() {
   return (
     <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4">
       <path d="M6 6 14 14M14 6 6 14" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ChevronIcon() {
-  return (
-    <svg viewBox="0 0 20 20" className="h-5 w-5 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="m5 8 5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 type FeatureCard = {
@@ -34,8 +34,6 @@ type IndustryShowcase = {
   keyFeature: string;
   description: string;
   previewClassName: string;
-  companions: IndustryKey[];
-  icon: string;
 };
 
 const howItWorksSteps = [
@@ -64,38 +62,38 @@ const howItWorksSteps = [
 
 const websiteFeatures: FeatureCard[] = [
   {
-    title: "Custom Domain",
-    body: "Get your own .in or .com domain. Your brand, your address — not a marketplace URL.",
+    title: "Shiprocket Management",
+    body: "Manage shipping, tracking, and delivery workflows from one place with Shiprocket-ready operations.",
     tint: "bg-blue-50 text-[#2563EB]",
     icon: <GlobeIcon />,
   },
   {
-    title: "Mobile-First Design",
-    body: "Every template is optimized for mobile. 80% of Indian shoppers browse on their phones.",
+    title: "UPI Payments",
+    body: "Accept UPI, cards, and COD out of the box for Indian checkout expectations.",
     tint: "bg-orange-50 text-[#F97316]",
     icon: <PhoneIcon />,
   },
   {
-    title: "Free SSL & Hosting",
-    body: "Secure, fast, always-on hosting included in every plan at no extra cost.",
+    title: "Catalog Management",
+    body: "Add unlimited products, banners, collections, and offers without technical help.",
     tint: "bg-emerald-50 text-emerald-600",
     icon: <ShieldIcon />,
   },
   {
-    title: "Go Live in 15 Seconds",
-    body: "From signup to live store — the fastest website builder in India.",
+    title: "Marketing",
+    body: "Run campaigns, promote offers, and bring customers back with built-in marketing tools.",
     tint: "bg-sky-50 text-sky-600",
     icon: <BoltIcon />,
   },
   {
-    title: "100+ Templates",
-    body: "Industry-specific designs for clothing, food, electronics, beauty, pharmacy, and more.",
+    title: "OrderFlow Management",
+    body: "Track incoming orders, update statuses, and keep fulfillment moving without manual chaos.",
     tint: "bg-violet-50 text-violet-600",
     icon: <LayoutIcon />,
   },
   {
-    title: "WhatsApp Integration",
-    body: "Let customers order directly via WhatsApp. The channel where India already shops.",
+    title: "Analytics",
+    body: "Track visits, orders, revenue, and top-performing products in real time.",
     tint: "bg-green-50 text-green-600",
     icon: <ChatIcon />,
   },
@@ -156,8 +154,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Variant swatches + lookbook sections",
     description: "Made for boutiques that want elegant storytelling, fast size selection, and WhatsApp checkout.",
     previewClassName: "bg-[linear-gradient(135deg,#E0EAFF,#9CC0FF)]",
-    companions: ["Restaurant", "Grocery"],
-    icon: "👗",
   },
   Grocery: {
     name: "Grocery",
@@ -165,8 +161,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Repeat-order shortcuts + delivery slots",
     description: "Designed for fast-moving daily essentials with category-first browsing and reorder speed.",
     previewClassName: "bg-[linear-gradient(135deg,#D6F5DC,#86EFAC)]",
-    companions: ["Kirana Store", "Pharmacy"],
-    icon: "🛒",
   },
   Restaurant: {
     name: "Restaurant",
@@ -174,8 +168,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Menu sections + WhatsApp ordering CTA",
     description: "A storefront that highlights combos, chef specials, and same-day delivery without app commissions.",
     previewClassName: "bg-[linear-gradient(135deg,#FFE3CC,#FDBA74)]",
-    companions: ["Clothing", "Beauty"],
-    icon: "🍕",
   },
   Pharmacy: {
     name: "Pharmacy",
@@ -183,8 +175,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Prescription upload + refill reminders",
     description: "Built for quick medicine discovery, trust-building badges, and repeat refill orders.",
     previewClassName: "bg-[linear-gradient(135deg,#DFFCF3,#6EE7B7)]",
-    companions: ["Grocery", "Kirana Store"],
-    icon: "💊",
   },
   "Mobile Shop": {
     name: "Mobile Shop",
@@ -192,8 +182,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Spec comparison + launch banners",
     description: "Perfect for showcasing phones, accessories, exchange offers, and EMI-ready deals.",
     previewClassName: "bg-[linear-gradient(135deg,#E0E7FF,#A5B4FC)]",
-    companions: ["Furniture", "Clothing"],
-    icon: "📱",
   },
   Furniture: {
     name: "Furniture",
@@ -201,8 +189,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Room-based collections + design storytelling",
     description: "Showcase catalogs beautifully with premium layouts that feel editorial and conversion-focused.",
     previewClassName: "bg-[linear-gradient(135deg,#FDE7D3,#FBBF24)]",
-    companions: ["Mobile Shop", "Beauty"],
-    icon: "🛋",
   },
   Beauty: {
     name: "Beauty",
@@ -210,8 +196,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Before-after sections + curated bundles",
     description: "A polished storefront for salons and beauty brands that rely on trust, visuals, and repeat buyers.",
     previewClassName: "bg-[linear-gradient(135deg,#FDE1EF,#F9A8D4)]",
-    companions: ["Clothing", "Restaurant"],
-    icon: "💄",
   },
   "Kirana Store": {
     name: "Kirana Store",
@@ -219,8 +203,6 @@ const industryShowcases: Record<IndustryKey, IndustryShowcase> = {
     keyFeature: "Quick reorder cards + local delivery highlights",
     description: "Purpose-built for neighborhood stores that want simple ordering and repeat customer retention.",
     previewClassName: "bg-[linear-gradient(135deg,#E7F7D7,#A3E635)]",
-    companions: ["Grocery", "Pharmacy"],
-    icon: "🏪",
   },
 };
 
@@ -246,13 +228,11 @@ const testimonials = [
 ];
 
 export default function WebsitesPage() {
-  const [activeIndustry, setActiveIndustry] = useState<IndustryKey>("Clothing");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const activeCards = [activeIndustry, ...industryShowcases[activeIndustry].companions].slice(0, 3);
+  const showcaseCards: IndustryKey[] = ["Clothing", "Grocery"];
 
   return (
     <div className="animate-page-enter bg-white text-slate-900">
@@ -267,8 +247,7 @@ export default function WebsitesPage() {
                 Build a Professional Website in Under 5 Minutes
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-300">
-                No code. No designers. No delays. Get a stunning business website with your own domain, WhatsApp ordering,
-                and UPI payments — built for Indian merchants from day one.
+                Build your business online with a stunning website and seamless payment solutions — no code required.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -276,7 +255,7 @@ export default function WebsitesPage() {
                 to="/signup"
                 className="inline-flex h-14 items-center justify-center rounded-full bg-white px-7 text-base font-semibold text-[#2563EB] transition-transform hover:-translate-y-0.5"
               >
-                Start Building Free
+                Start Building
               </Link>
               <button
                 type="button"
@@ -285,13 +264,6 @@ export default function WebsitesPage() {
               >
                 See How It Works
               </button>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              {["10 Lakh+ Stores Created", "15 Seconds to Go Live", "Free Hosting Included"].map((item) => (
-                <div key={item} className="rounded-full border border-white/10 bg-white/10 px-4 py-3 text-sm font-medium text-white/90 backdrop-blur">
-                  {item}
-                </div>
-              ))}
             </div>
           </div>
           <div className="relative">
@@ -447,36 +419,13 @@ export default function WebsitesPage() {
               Built for every type of Indian business
             </h2>
           </div>
-          <div className="mt-10 flex gap-3 overflow-x-auto pb-2">
-            {Object.values(industryShowcases).map((industry) => (
-              <button
-                key={industry.name}
-                type="button"
-                onClick={() => setActiveIndustry(industry.name)}
-                className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-3 text-sm font-semibold transition-colors ${
-                  activeIndustry === industry.name
-                    ? "border-[#2563EB] bg-blue-50 text-[#2563EB]"
-                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
-                }`}
-              >
-                <span>{industry.icon}</span>
-                <span>{industry.name}</span>
-              </button>
-            ))}
-          </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {activeCards.map((industryKey) => {
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {showcaseCards.map((industryKey) => {
               const showcase = industryShowcases[industryKey];
 
               return (
                 <div key={showcase.name} className="rounded-[20px] border border-slate-200 bg-white p-6 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-sm font-semibold text-[#2563EB]">{showcase.name}</div>
-                      <h3 className="mt-2 font-heading text-2xl font-bold text-slate-900">{showcase.templateName}</h3>
-                    </div>
-                    <div className="text-3xl">{showcase.icon}</div>
-                  </div>
+                  <h3 className="font-heading text-2xl font-bold text-slate-900">{showcase.templateName}</h3>
                   <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Key Feature</p>
                   <p className="mt-2 text-base font-semibold text-slate-900">{showcase.keyFeature}</p>
                   <p className="mt-4 text-base leading-7 text-slate-600">{showcase.description}</p>
